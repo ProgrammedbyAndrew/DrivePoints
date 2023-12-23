@@ -6,7 +6,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="mainPage" class="container">
+    <!-- Modal for Terms and Conditions -->
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Terms and Conditions</h2>
+            <p>Welcome to Drive Rewards! By using this app, you agree to practice safe driving and adhere to traffic laws. Do not use your device while driving. Points are rewarded for non-use of a phone while driving. Continued use of GPS running in the background can decrease battery life.</p>
+            <button id="acceptTerms" class="btn">Accept</button>
+        </div>
+    </div>
+
+    <div id="mainPage" class="container hidden">
         <header>
             <h1>Drive Rewards</h1>
             <div id="points">Total Points: <span id="totalPoints">186</span></div>
