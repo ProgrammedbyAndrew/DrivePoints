@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Listen for click on the 'Accept Terms' button
-    document.getElementById('acceptTerms').addEventListener('click', function() {
-        // Hide the terms page
-        document.getElementById('termsPage').classList.add('hidden');
-        // Show the main page
-        document.getElementById('mainPage').classList.remove('hidden');
-    });
+    var modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <h2>Terms and Conditions</h2>
+            <p>Please read and accept our terms and conditions to use the Drive Rewards app.</p>
+            <button id="acceptTerms" class="btn">Accept</button>
+        </div>
+    `;
+    document.body.appendChild(modal);
 
-    // Add any additional JavaScript for the main page here
+    document.getElementById('acceptTerms').addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
 });
