@@ -24,18 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Organic Market', reward: 'Discount on Organic Products', image: 'placeholder-image19.jpg' },
             { name: 'Game Zone', reward: 'Free Arcade Tokens', image: 'placeholder-image20.jpg' }
         ];
-
+        
         const rewardsSection = document.getElementById('rewardsSection');
         rewards.forEach(reward => {
-            const pointsNeeded = Math.floor(Math.random() * 901) + 100; // Random cost between 100 and 1000 points
+            const pointsNeeded = Math.floor(Math.random() * 901) + 100;
             const rewardDiv = document.createElement('div');
             rewardDiv.classList.add('reward');
             rewardDiv.innerHTML = `
                 <h3>${reward.name}</h3>
                 <p>${reward.reward} - ${pointsNeeded} Points</p>
-                <img src="${reward.image}" alt="${reward.name}" style="width:150px;height:150px;">
-                <button class="btn green">Redeem Offer</button>`;
+                <img src="${reward.image}" alt="${reward.name}" style="width:120px;height:120px;">
+                <button class="btn">Redeem Offer</button>`;
             rewardsSection.appendChild(rewardDiv);
         });
     }
 });
+
+
+
