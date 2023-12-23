@@ -58,39 +58,30 @@ header {
 
 .rewards-grid {
     display: flex;
-    flex-direction: column; /* Stack rewards vertically on small screens */
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .reward {
     background-color: #333333;
     padding: 15px;
     border-radius: 10px;
-    margin: 10px 0; /* Adjust margin */
-    width: 100%; /* Full width */
+    margin: 10px;
+    width: calc(100% / 3 - 20px); /* Three items per row */
     box-sizing: border-box;
     text-align: left;
 }
 
 .reward img {
-    width: 100px; /* Adjust image size */
+    width: 100px;
     height: 100px;
-    float: left;
-    margin-right: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
     .reward {
-        width: calc(50% - 20px); /* Adjust width on larger screens */
-    }
-
-    .reward img {
-        width: 150px; /* Larger images on larger screens */
-        height: 150px;
-    }
-
-    .btn {
-        width: auto; /* Auto width for buttons on larger screens */
+        width: calc(100% - 20px); /* Full width on smaller screens */
     }
 }
