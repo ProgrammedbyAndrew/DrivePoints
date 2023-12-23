@@ -5,30 +5,42 @@ body, html {
     background-color: #121212;
     color: white;
     text-align: center;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .container {
-    width: 100%;
     max-width: 600px;
     margin: auto;
     padding: 0 10px;
 }
 
-header {
-    padding: 20px;
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
     background-color: #1E1E1E;
-    border-bottom: 2px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    font-size: 1.2em; /* Larger font for readability */
 }
 
-#points {
-    font-size: 1.6em;
-    margin-bottom: 20px;
-}
-
+/* Reward Grid Styles */
 .rewards-grid {
     display: flex;
     flex-wrap: wrap;
@@ -40,33 +52,36 @@ header {
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
-    width: calc(33% - 20px);
+    width: calc(33% - 20px); /* Three items per row */
     box-sizing: border-box;
     text-align: left;
 }
 
-.reward img {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+/* Specific styles for marketplace buttons */
+.reward .btn {
+    background-color: #4CAF50; /* Green color */
 }
 
-.btn {
-    background-color: #4CAF50;
+.reward .btn:hover {
+    background-color: #388E3C;
+}
+
+/* Styles for non-marketplace buttons */
+.btn:not(.marketplace) {
+    background-color: #1E88E5;
     color: white;
     border: none;
-    padding: 12px 18px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1.2em;
-    width: auto;
+    font-size: 1em;
+    width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
 
-.btn:hover {
-    background-color: #388E3C;
+.btn:not(.marketplace):hover {
+    background-color: #1565C0;
 }
 
 @media (max-width: 600px) {
