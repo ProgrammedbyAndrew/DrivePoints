@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadRewards();
 
-  function loadRewards() {
+    function loadRewards() {
         const rewards = [
             { name: 'Café Delight', reward: '10% off Coffee', image: 'placeholder-image1.jpg' },
             { name: 'Tech Gadgets', reward: '15% off Accessories', image: 'placeholder-image2.jpg' },
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Game Zone', reward: 'Free Arcade Tokens', image: 'placeholder-image20.jpg' }
         ];
 
-
         const rewardsSection = document.getElementById('rewardsSection');
         rewards.forEach(reward => {
             const pointsNeeded = Math.floor(Math.random() * 901) + 100; // Random cost between 100 and 1000 points
@@ -35,13 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3>${reward.name}</h3>
                 <p>${reward.reward} - ${pointsNeeded} Points</p>
                 <img src="${reward.image}" alt="${reward.name}" style="width:150px;height:150px;">
-                <button class="btn">Redeem Offer</button>
-            `;
+                <button class="btn green">Redeem Offer</button>`;
             rewardsSection.appendChild(rewardDiv);
         });
     }
 });
-
-
-
- 
